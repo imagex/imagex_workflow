@@ -102,13 +102,6 @@ function imagex_workflow_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'workbench_access_node_type_page';
-  $strongarm->value = 1;
-  $export['workbench_access_node_type_page'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'workbench_access_node_type_tutorial';
   $strongarm->value = 1;
   $export['workbench_access_node_type_tutorial'] = $strongarm;
@@ -161,13 +154,6 @@ function imagex_workflow_strongarm() {
   $strongarm->name = 'workbench_moderation_default_state_imagex_news';
   $strongarm->value = 'draft';
   $export['workbench_moderation_default_state_imagex_news'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'workbench_moderation_default_state_page';
-  $strongarm->value = 'draft';
-  $export['workbench_moderation_default_state_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
