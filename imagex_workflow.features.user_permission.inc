@@ -174,13 +174,6 @@ function imagex_workflow_user_default_permissions() {
     'module' => 'workbench_moderation',
   );
 
-  // Exported permission: override default scheduler time.
-  $permissions['override default scheduler time'] = array(
-    'name' => 'override default scheduler time',
-    'roles' => array(),
-    'module' => 'scheduler_workbench',
-  );
-
   // Exported permission: use workbench_media add form.
   $permissions['use workbench_media add form'] = array(
     'name' => 'use workbench_media add form',
