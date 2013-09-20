@@ -43,7 +43,7 @@ function imagex_workflow_default_rules_configuration() {
       ],
       "DO" : [
         { "mail" : {
-            "to" : "[node:author]",
+            "to" : "[node:author:mail]",
             "subject" : "Subject:   [site:name] Not Ready: [node:title] ",
             "message" : "Hello ,\\r\\n\\r\\nYour submission:  [node:title] has been reverted to Draft, and can be viewed at [node:url].  Please review revision notes for more information, and next steps.",
             "language" : [ "" ]
@@ -65,7 +65,7 @@ function imagex_workflow_default_rules_configuration() {
       ],
       "DO" : [
         { "mail" : {
-            "to" : " [site:name] Published: [node:title] ",
+            "to" : "[node:author:mail]",
             "subject" : " [site:name] Published: [node:title] ",
             "message" : "Hello ,\\r\\n\\r\\nYour submission:  [node:title] has been published, and can be viewed at [node:url].  \\r\\n",
             "language" : [ "" ]
@@ -87,7 +87,7 @@ function imagex_workflow_default_rules_configuration() {
       ],
       "DO" : [
         { "mail" : {
-            "to" : "[node:author]\\r\\n",
+            "to" : "[node:author:mail]\\r\\n",
             "subject" : " [site:name]  Reverted to \\u2018Needs Review\\u2019: [node:title] ",
             "message" : "Hello ,\\r\\n\\r\\nYour submission:  [node:title] has been reverted to \\u0027Needs Review\\u0027, and can be viewed at [node:url].  Please review revision notes for more information and next steps.",
             "language" : [ "" ]

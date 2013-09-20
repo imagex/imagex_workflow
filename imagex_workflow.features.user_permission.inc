@@ -15,10 +15,10 @@ function imagex_workflow_user_default_permissions() {
     'name' => 'access workbench',
     'roles' => array(
       'Administrator' => 'Administrator',
+      'Content Administrator' => 'Content Administrator',
       'Content Creator' => 'Content Creator',
       'Content Manager' => 'Content Manager',
       'Content Moderator' => 'Content Moderator',
-      'System Administrator' => 'System Administrator',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'workbench',
@@ -29,8 +29,8 @@ function imagex_workflow_user_default_permissions() {
     'name' => 'access workbench access by role',
     'roles' => array(
       'Administrator' => 'Administrator',
+      'Content Administrator' => 'Content Administrator',
       'Content Manager' => 'Content Manager',
-      'System Administrator' => 'System Administrator',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'workbench_access',
@@ -41,8 +41,8 @@ function imagex_workflow_user_default_permissions() {
     'name' => 'administer workbench',
     'roles' => array(
       'Administrator' => 'Administrator',
+      'Content Administrator' => 'Content Administrator',
       'Content Manager' => 'Content Manager',
-      'System Administrator' => 'System Administrator',
     ),
     'module' => 'workbench',
   );
@@ -52,8 +52,8 @@ function imagex_workflow_user_default_permissions() {
     'name' => 'administer workbench access',
     'roles' => array(
       'Administrator' => 'Administrator',
+      'Content Administrator' => 'Content Administrator',
       'Content Manager' => 'Content Manager',
-      'System Administrator' => 'System Administrator',
     ),
     'module' => 'workbench_access',
   );
@@ -63,8 +63,8 @@ function imagex_workflow_user_default_permissions() {
     'name' => 'administer workbench moderation',
     'roles' => array(
       'Administrator' => 'Administrator',
+      'Content Administrator' => 'Content Administrator',
       'Content Manager' => 'Content Manager',
-      'System Administrator' => 'System Administrator',
     ),
     'module' => 'workbench_moderation',
   );
@@ -74,8 +74,8 @@ function imagex_workflow_user_default_permissions() {
     'name' => 'assign workbench access',
     'roles' => array(
       'Administrator' => 'Administrator',
+      'Content Administrator' => 'Content Administrator',
       'Content Manager' => 'Content Manager',
-      'System Administrator' => 'System Administrator',
     ),
     'module' => 'workbench_access',
   );
@@ -94,8 +94,8 @@ function imagex_workflow_user_default_permissions() {
     'name' => 'bypass workbench moderation',
     'roles' => array(
       'Administrator' => 'Administrator',
+      'Content Administrator' => 'Content Administrator',
       'Content Manager' => 'Content Manager',
-      'System Administrator' => 'System Administrator',
     ),
     'module' => 'workbench_moderation',
   );
@@ -105,10 +105,10 @@ function imagex_workflow_user_default_permissions() {
     'name' => 'moderate content from draft to needs_review',
     'roles' => array(
       'Administrator' => 'Administrator',
+      'Content Administrator' => 'Content Administrator',
       'Content Creator' => 'Content Creator',
       'Content Manager' => 'Content Manager',
       'Content Moderator' => 'Content Moderator',
-      'System Administrator' => 'System Administrator',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'workbench_moderation',
@@ -119,10 +119,10 @@ function imagex_workflow_user_default_permissions() {
     'name' => 'moderate content from needs_review to draft',
     'roles' => array(
       'Administrator' => 'Administrator',
+      'Content Administrator' => 'Content Administrator',
       'Content Creator' => 'Content Creator',
       'Content Manager' => 'Content Manager',
       'Content Moderator' => 'Content Moderator',
-      'System Administrator' => 'System Administrator',
     ),
     'module' => 'workbench_moderation',
   );
@@ -132,10 +132,10 @@ function imagex_workflow_user_default_permissions() {
     'name' => 'moderate content from needs_review to published',
     'roles' => array(
       'Administrator' => 'Administrator',
+      'Content Administrator' => 'Content Administrator',
       'Content Creator' => 'Content Creator',
       'Content Manager' => 'Content Manager',
       'Content Moderator' => 'Content Moderator',
-      'System Administrator' => 'System Administrator',
     ),
     'module' => 'workbench_moderation',
   );
@@ -145,19 +145,8 @@ function imagex_workflow_user_default_permissions() {
     'name' => 'moderate content from published to archived',
     'roles' => array(
       'Administrator' => 'Administrator',
+      'Content Administrator' => 'Content Administrator',
       'Content Manager' => 'Content Manager',
-      'System Administrator' => 'System Administrator',
-    ),
-    'module' => 'workbench_moderation',
-  );
-
-  // Exported permission: moderate content from published to draft.
-  $permissions['moderate content from published to draft'] = array(
-    'name' => 'moderate content from published to draft',
-    'roles' => array(
-      'Administrator' => 'Administrator',
-      'Content Manager' => 'Content Manager',
-      'System Administrator' => 'System Administrator',
     ),
     'module' => 'workbench_moderation',
   );
@@ -167,9 +156,9 @@ function imagex_workflow_user_default_permissions() {
     'name' => 'moderate content from published to needs_review',
     'roles' => array(
       'Administrator' => 'Administrator',
+      'Content Administrator' => 'Content Administrator',
       'Content Creator' => 'Content Creator',
       'Content Manager' => 'Content Manager',
-      'System Administrator' => 'System Administrator',
     ),
     'module' => 'workbench_moderation',
   );
@@ -179,9 +168,9 @@ function imagex_workflow_user_default_permissions() {
     'name' => 'use workbench_media add form',
     'roles' => array(
       'Administrator' => 'Administrator',
+      'Content Administrator' => 'Content Administrator',
       'Content Creator' => 'Content Creator',
       'Content Manager' => 'Content Manager',
-      'System Administrator' => 'System Administrator',
     ),
     'module' => 'workbench_media',
   );
@@ -191,10 +180,10 @@ function imagex_workflow_user_default_permissions() {
     'name' => 'use workbench_moderation my drafts tab',
     'roles' => array(
       'Administrator' => 'Administrator',
+      'Content Administrator' => 'Content Administrator',
       'Content Creator' => 'Content Creator',
       'Content Manager' => 'Content Manager',
       'Content Moderator' => 'Content Moderator',
-      'System Administrator' => 'System Administrator',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'workbench_moderation',
@@ -205,10 +194,10 @@ function imagex_workflow_user_default_permissions() {
     'name' => 'use workbench_moderation needs review tab',
     'roles' => array(
       'Administrator' => 'Administrator',
+      'Content Administrator' => 'Content Administrator',
       'Content Creator' => 'Content Creator',
       'Content Manager' => 'Content Manager',
       'Content Moderator' => 'Content Moderator',
-      'System Administrator' => 'System Administrator',
     ),
     'module' => 'workbench_moderation',
   );
@@ -218,10 +207,10 @@ function imagex_workflow_user_default_permissions() {
     'name' => 'view all unpublished content',
     'roles' => array(
       'Administrator' => 'Administrator',
+      'Content Administrator' => 'Content Administrator',
       'Content Creator' => 'Content Creator',
       'Content Manager' => 'Content Manager',
       'Content Moderator' => 'Content Moderator',
-      'System Administrator' => 'System Administrator',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'workbench_moderation',
@@ -232,10 +221,10 @@ function imagex_workflow_user_default_permissions() {
     'name' => 'view moderation history',
     'roles' => array(
       'Administrator' => 'Administrator',
+      'Content Administrator' => 'Content Administrator',
       'Content Creator' => 'Content Creator',
       'Content Manager' => 'Content Manager',
       'Content Moderator' => 'Content Moderator',
-      'System Administrator' => 'System Administrator',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'workbench_moderation',
@@ -246,10 +235,10 @@ function imagex_workflow_user_default_permissions() {
     'name' => 'view moderation messages',
     'roles' => array(
       'Administrator' => 'Administrator',
+      'Content Administrator' => 'Content Administrator',
       'Content Creator' => 'Content Creator',
       'Content Manager' => 'Content Manager',
       'Content Moderator' => 'Content Moderator',
-      'System Administrator' => 'System Administrator',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'workbench_moderation',
@@ -260,8 +249,8 @@ function imagex_workflow_user_default_permissions() {
     'name' => 'view workbench access information',
     'roles' => array(
       'Administrator' => 'Administrator',
+      'Content Administrator' => 'Content Administrator',
       'Content Manager' => 'Content Manager',
-      'System Administrator' => 'System Administrator',
     ),
     'module' => 'workbench_access',
   );
@@ -271,8 +260,8 @@ function imagex_workflow_user_default_permissions() {
     'name' => 'view workbench taxonomy pages',
     'roles' => array(
       'Administrator' => 'Administrator',
+      'Content Administrator' => 'Content Administrator',
       'Content Manager' => 'Content Manager',
-      'System Administrator' => 'System Administrator',
     ),
     'module' => 'workbench_access',
   );
