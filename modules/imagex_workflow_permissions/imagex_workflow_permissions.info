@@ -5,6 +5,7 @@ package = ImageX
 version = 7.x-1.0
 project = imagex_workflow_permissions
 dependencies[] = features
+dependencies[] = imagex_user_roles
 dependencies[] = workbench
 dependencies[] = workbench_access
 dependencies[] = workbench_media
