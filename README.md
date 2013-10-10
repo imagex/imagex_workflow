@@ -12,6 +12,7 @@ This component enables content moderation and workflow by leveraging the Workben
 * Contrib: [Workbench Access] (https://drupal.org/project/workbench_access) (>= 1.2)
 * Contrib: [Workbench Media] (https://drupal.org/project/workbench_media) (>=1.1)
 * Contrib: [Workbench Moderation] (https://drupal.org/project/workbench_moderation) (>=1.3)
+* Imagex Component: [Workflow Permissions] (https://drupal.org/project/workbench_moderation) (>= 7.x-dev
 
 ### Extension Modules
 
