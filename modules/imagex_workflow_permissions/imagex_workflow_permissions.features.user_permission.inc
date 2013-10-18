@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * imagex_workflow.features.user_permission.inc
+ * imagex_workflow_permissions.features.user_permission.inc
  */
 
 /**
  * Implements hook_user_default_permissions().
  */
-function imagex_workflow_user_default_permissions() {
+function imagex_workflow_permissions_user_default_permissions() {
   $permissions = array();
 
   // Exported permission: access workbench.
@@ -34,6 +34,22 @@ function imagex_workflow_user_default_permissions() {
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'workbench_access',
+  );
+
+  // Exported permission: add terms in 3.
+  $permissions['add terms in 3'] = array(
+    'name' => 'add terms in 3',
+    'roles' => array(),
+    'module' => 'taxonomy_access_fix',
+  );
+
+  // Exported permission: administer scheduler.
+  $permissions['administer scheduler'] = array(
+    'name' => 'administer scheduler',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'scheduler',
   );
 
   // Exported permission: administer workbench.
@@ -100,6 +116,20 @@ function imagex_workflow_user_default_permissions() {
     'module' => 'workbench_moderation',
   );
 
+  // Exported permission: delete terms in 3.
+  $permissions['delete terms in 3'] = array(
+    'name' => 'delete terms in 3',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: edit terms in 3.
+  $permissions['edit terms in 3'] = array(
+    'name' => 'edit terms in 3',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
   // Exported permission: moderate content from draft to needs_review.
   $permissions['moderate content from draft to needs_review'] = array(
     'name' => 'moderate content from draft to needs_review',
@@ -151,6 +181,15 @@ function imagex_workflow_user_default_permissions() {
     'module' => 'workbench_moderation',
   );
 
+  // Exported permission: moderate content from published to draft.
+  $permissions['moderate content from published to draft'] = array(
+    'name' => 'moderate content from published to draft',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'workbench_moderation',
+  );
+
   // Exported permission: moderate content from published to needs_review.
   $permissions['moderate content from published to needs_review'] = array(
     'name' => 'moderate content from published to needs_review',
@@ -161,6 +200,24 @@ function imagex_workflow_user_default_permissions() {
       'Content Manager' => 'Content Manager',
     ),
     'module' => 'workbench_moderation',
+  );
+
+  // Exported permission: override default scheduler time.
+  $permissions['override default scheduler time'] = array(
+    'name' => 'override default scheduler time',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'scheduler_workbench',
+  );
+
+  // Exported permission: schedule (un)publishing of nodes.
+  $permissions['schedule (un)publishing of nodes'] = array(
+    'name' => 'schedule (un)publishing of nodes',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'scheduler',
   );
 
   // Exported permission: use workbench_media add form.
