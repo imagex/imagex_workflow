@@ -13,7 +13,6 @@ dependencies[] = rules
 dependencies[] = scheduler_workbench
 dependencies[] = strongarm
 dependencies[] = taxonomy
-dependencies[] = imagex_workflow_permissions
 dependencies[] = workbench
 dependencies[] = workbench_access
 dependencies[] = workbench_media
