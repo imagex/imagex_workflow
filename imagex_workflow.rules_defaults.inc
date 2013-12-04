@@ -60,8 +60,8 @@ function imagex_workflow_default_rules_configuration() {
       "ON" : [ "workbench_moderation_after_moderation_transition" ],
       "IF" : [
         { "content_is_using_workbench_moderation" : { "node" : [ "node" ] } },
-        { "contents_current_state" : { "node" : [ "node" ], "moderation_state" : "needs_review" } },
-        { "contents_current_state" : { "node" : [ "node" ], "moderation_state" : "published" } }
+        { "contents_current_state" : { "node" : [ "node" ], "moderation_state" : "published" } },
+        { "contents_previous_state" : { "node" : [ "node" ], "moderation_state" : "needs_review" } }
       ],
       "DO" : [
         { "mail" : {
