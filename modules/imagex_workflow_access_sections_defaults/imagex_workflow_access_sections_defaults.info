@@ -1,0 +1,16 @@
+name = Workflow Access Default Sections
+description = Default workflow sections for Workbench Access.
+core = 7.x
+package = ImageX
+version = 7.x-1.0-dev
+project = imagex_workflow_access_sections_defaults
+dependencies[] = imagex_user_roles
+dependencies[] = imagex_workflow
+dependencies[] = taxonomy
+dependencies[] = uuid
+dependencies[] = uuid_features
+dependencies[] = workbench
+dependencies[] = workbench_access
+features[features_api][] = api:2
+features[taxonomy][] = workbench_section
+features[uuid_term][] = d3f5f60c-54a5-4539-85e7-f3d0fc65390b
