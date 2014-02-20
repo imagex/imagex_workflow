@@ -5,3 +5,10 @@
  */
 
 include_once 'imagex_workflow.features.inc';
+// Forced the inclusion of the workbench_moderation states and transitions
+// as they are not auto-included during site install feature building using the
+// `features_include_defaults` function as the component is not recognized as includable.
+// If these files are not included, the foreach loop in `workbench_moderation_states_features_rebuild`
+// presents a warning due to `$defaults` equalling false.
+include_once 'imagex_workflow.features.workbench_moderation_states.inc';
+include_once 'imagex_workflow.features.workbench_moderation_transitions.inc';
