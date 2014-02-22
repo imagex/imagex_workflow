@@ -1,8 +1,0 @@
-name = Editorial Workflow Notifications
-description = Notification system and rules for the editorial workflow.
-core = 7.x
-package = ImageX
-version = 7.x-1.0
-project = imagex_workflow_notifications
-dependencies[] = imagex_workflow
-features[features_api][] = api:1
