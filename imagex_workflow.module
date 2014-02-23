@@ -12,3 +12,19 @@ include_once 'imagex_workflow.features.inc';
 // presents a warning due to `$defaults` equalling false.
 include_once 'imagex_workflow.features.workbench_moderation_states.inc';
 include_once 'imagex_workflow.features.workbench_moderation_transitions.inc';
+
+/**
+ * Implements hook_date_popup_pre_validate_alter().
+ *
+ * Assists in providing a default time for scheduler's publish_on and unpublish_on
+ * fields should only a date be presented. The date_popup api will present a form error
+ * should only the date be present and not the time during validation.
+ */
+function imagex_workflow_date_popup_pre_validate_alter(&$element, &$form_state, &$input) {
+  if (in_array($element['#name'], array('publish_on', 'unpublish_on')) && isset($form_state['values'][$element['#name']])) {
+    if (!empty($form_state['values'][$element['#name']]['date']) && empty($form_state['values'][$element['#name']]['time'])) {
+      $form_state['values'][$element['#name']]['time'] = '00:00:00';
+    }
+    $input = $form_state['values'][$element['#name']];
+  }
+}
