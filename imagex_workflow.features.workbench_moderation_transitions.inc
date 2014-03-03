@@ -34,5 +34,8 @@ function imagex_workflow_workbench_moderation_export_transitions() {
       'to_name' => 'needs_review',
     ),
   );
+
+  features_alter_code('workbench_moderation_transitions', $items);
+
   return $items;
 }
