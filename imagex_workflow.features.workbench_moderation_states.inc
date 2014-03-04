@@ -34,5 +34,8 @@ function imagex_workflow_workbench_moderation_export_states() {
       'weight' => -10,
     ),
   );
+
+  features_alter_code('workbench_moderation_states', $items);
+
   return $items;
 }
