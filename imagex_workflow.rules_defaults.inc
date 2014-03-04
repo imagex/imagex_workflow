@@ -12,9 +12,10 @@ function imagex_workflow_default_rules_configuration() {
   $items['rules_imagex_workflow_draft_to_needs_review'] = entity_import('rules_config', '{ "rules_imagex_workflow_draft_to_needs_review" : {
       "LABEL" : "imagex_workflow_draft_to_needs_review",
       "PLUGIN" : "reaction rule",
+      "OWNER" : "rules",
       "TAGS" : [ "workbench" ],
       "REQUIRES" : [ "workbench_moderation", "rules" ],
-      "ON" : [ "workbench_moderation_after_moderation_transition" ],
+      "ON" : { "workbench_moderation_after_moderation_transition" : [] },
       "IF" : [
         { "content_is_using_workbench_moderation" : { "node" : [ "node" ] } },
         { "contents_previous_state" : { "node" : [ "node" ], "moderation_state" : "draft" } },
@@ -34,8 +35,9 @@ function imagex_workflow_default_rules_configuration() {
   $items['rules_imagex_workflow_needs_review_to_draft'] = entity_import('rules_config', '{ "rules_imagex_workflow_needs_review_to_draft" : {
       "LABEL" : "imagex_workflow_needs_review_to_draft",
       "PLUGIN" : "reaction rule",
+      "OWNER" : "rules",
       "REQUIRES" : [ "workbench_moderation", "rules" ],
-      "ON" : [ "workbench_moderation_after_moderation_transition" ],
+      "ON" : { "workbench_moderation_after_moderation_transition" : [] },
       "IF" : [
         { "content_is_using_workbench_moderation" : { "node" : [ "node" ] } },
         { "contents_previous_state" : { "node" : [ "node" ], "moderation_state" : "needs_review" } },
@@ -55,9 +57,10 @@ function imagex_workflow_default_rules_configuration() {
   $items['rules_imagex_workflow_needs_review_to_published'] = entity_import('rules_config', '{ "rules_imagex_workflow_needs_review_to_published" : {
       "LABEL" : "imagex_workflow_needs_review_to_published",
       "PLUGIN" : "reaction rule",
+      "OWNER" : "rules",
       "TAGS" : [ "workbench" ],
       "REQUIRES" : [ "workbench_moderation", "rules" ],
-      "ON" : [ "workbench_moderation_after_moderation_transition" ],
+      "ON" : { "workbench_moderation_after_moderation_transition" : [] },
       "IF" : [
         { "content_is_using_workbench_moderation" : { "node" : [ "node" ] } },
         { "contents_current_state" : { "node" : [ "node" ], "moderation_state" : "published" } },
@@ -77,9 +80,10 @@ function imagex_workflow_default_rules_configuration() {
   $items['rules_imagex_workflow_published_to_needs_review'] = entity_import('rules_config', '{ "rules_imagex_workflow_published_to_needs_review" : {
       "LABEL" : "imagex_workflow_published_to_needs_review",
       "PLUGIN" : "reaction rule",
+      "OWNER" : "rules",
       "TAGS" : [ "workbench" ],
       "REQUIRES" : [ "workbench_moderation", "rules" ],
-      "ON" : [ "workbench_moderation_after_moderation_transition" ],
+      "ON" : { "workbench_moderation_after_moderation_transition" : [] },
       "IF" : [
         { "content_is_using_workbench_moderation" : { "node" : [ "node" ] } },
         { "contents_current_state" : { "node" : [ "node" ], "moderation_state" : "needs_review" } },
