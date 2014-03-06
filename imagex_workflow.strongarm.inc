@@ -64,5 +64,7 @@ function imagex_workflow_strongarm() {
   $strongarm->value = 1;
   $export['workbench_access_menu_limit'] = $strongarm;
 
+  features_alter_code('variable', $export);
+
   return $export;
 }
