@@ -100,6 +100,18 @@ function imagex_workflow_default_rules_configuration() {
       ]
     }
   }');
+  $items['rules_imagex_workflow_unpublished_rejected'] = entity_import('rules_config', '{ "rules_imagex_workflow_unpublished_rejected" : {
+      "LABEL" : "imagex_workflow_unpublished_rejected",
+      "PLUGIN" : "reaction rule",
+      "OWNER" : "rules",
+      "REQUIRES" : [ "workbench_moderation", "rules" ],
+      "ON" : { "node_update" : [] },
+      "IF" : [
+        { "contents_current_state" : { "node" : [ "node" ], "moderation_state" : "rejected" } }
+      ],
+      "DO" : [ { "node_unpublish" : { "node" : [ "node" ] } } ]
+    }
+  }');
 
   features_alter_code('rules_config', $items);
 
