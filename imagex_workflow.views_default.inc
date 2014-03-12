@@ -507,5 +507,7 @@ function imagex_workflow_views_default_views() {
   $handler->display->display_options['link_to_view'] = '1';
   $export['imagex_workflow_workbench_moderation'] = $view;
 
+  features_alter_code('views_view', $export);
+
   return $export;
 }

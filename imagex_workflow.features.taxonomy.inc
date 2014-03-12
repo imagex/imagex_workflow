@@ -8,7 +8,7 @@
  * Implements hook_taxonomy_default_vocabularies().
  */
 function imagex_workflow_taxonomy_default_vocabularies() {
-  return array(
+  $taxonomy = array(
     'workbench_section' => array(
       'name' => 'Workbench Section',
       'machine_name' => 'workbench_section',
@@ -16,6 +16,7 @@ function imagex_workflow_taxonomy_default_vocabularies() {
       'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,
+      'aggregator_item' => FALSE,
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -33,4 +34,8 @@ function imagex_workflow_taxonomy_default_vocabularies() {
       ),
     ),
   );
+
+  features_alter_code('taxonomy', $taxonomy);
+
+  return $taxonomy;
 }

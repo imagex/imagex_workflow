@@ -13,7 +13,7 @@ function imagex_workflow_workbench_moderation_export_states() {
       'name' => 'archived',
       'label' => 'Archived',
       'description' => 'Archived content',
-      'weight' => 0,
+      'weight' => -6,
     ),
     'draft' => array(
       'name' => 'draft',
@@ -25,14 +25,17 @@ function imagex_workflow_workbench_moderation_export_states() {
       'name' => 'needs_review',
       'label' => 'Needs Review',
       'description' => 'Ready for moderation',
-      'weight' => 0,
+      'weight' => -4,
     ),
     'published' => array(
       'name' => 'published',
       'label' => 'Published',
       'description' => 'Make this version live',
-      'weight' => -10,
+      'weight' => -8,
     ),
   );
+
+  features_alter_code('workbench_moderation_states', $items);
+
   return $items;
 }
