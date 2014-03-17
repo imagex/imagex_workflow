@@ -44,14 +44,22 @@ function imagex_workflow_form_alter(&$form, &$form_state, $form_id) {
  */
 function imagex_workflow_workbench_submit(&$form, &$form_state) {
   if (!empty($form_state['input']['sections']) && db_table_exists('workbench_access_user')) {
-    foreach ($form_state['input']['sections'] as $key => $row) {
-      db_merge('workbench_access_user')
-        ->key(array('access_id' => $key))
-        ->fields(array(
-          'uid' => 1,
-          'access_scheme' => 'taxonomy',
-        ))
-        ->execute();
+    foreach ($form_state['input']['sections']['workbench_section'] as $key => $row) {
+      if (!empty($row)) {
+        db_merge('workbench_access_user')
+          ->key(array('access_id' => $key))
+          ->fields(array(
+            'uid' => 1,
+            'access_scheme' => 'taxonomy',
+          ))
+          ->execute();
+      }
+      else {
+        db_delete('workbench_access_user')
+          ->condition('uid', 1)
+          ->condition('access_id', $key)
+          ->execute();
+      }
     }
   }
 }
