@@ -96,7 +96,6 @@ function imagex_workflow_views_default_views_alter(&$views) {
     $handler->display_options['filters']['current']['table'] = 'workbench_moderation_node_history';
     $handler->display_options['filters']['current']['field'] = 'current';
     $handler->display_options['filters']['current']['value'] = '1';
-    $handler->display_options['filters']['current']['exposed'] = TRUE;
     $handler->display_options['filters']['current']['expose']['operator_id'] = '';
     $handler->display_options['filters']['current']['expose']['label'] = 'Current revision';
     $handler->display_options['filters']['current']['expose']['operator'] = 'current_op';
