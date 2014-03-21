@@ -100,6 +100,7 @@ function imagex_workflow_default_rules_configuration() {
       ]
     }
   }');
+
   $items['rules_imagex_workflow_unpublished_rejected'] = entity_import('rules_config', '{ "rules_imagex_workflow_unpublished_rejected" : {
       "LABEL" : "imagex_workflow_unpublished_rejected",
       "PLUGIN" : "reaction rule",
