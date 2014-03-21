@@ -33,6 +33,12 @@ function imagex_workflow_workbench_moderation_export_states() {
       'description' => 'Make this version live',
       'weight' => -8,
     ),
+    'rejected' => array(
+      'name' => 'rejected',
+      'label' => 'Rejected',
+      'description' => 'Rejected content',
+      'weight' => -2,
+    ),
   );
 
   features_alter_code('workbench_moderation_states', $items);

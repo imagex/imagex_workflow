@@ -13,6 +13,10 @@ function imagex_workflow_workbench_moderation_export_transitions() {
       'from_name' => 'draft',
       'to_name' => 'needs_review',
     ),
+    'draft:rejected' => array(
+      'from_name' => 'draft',
+      'to_name' => 'rejected',
+    ),
     'needs_review:draft' => array(
       'from_name' => 'needs_review',
       'to_name' => 'draft',
@@ -20,6 +24,10 @@ function imagex_workflow_workbench_moderation_export_transitions() {
     'needs_review:published' => array(
       'from_name' => 'needs_review',
       'to_name' => 'published',
+    ),
+    'needs_review:rejected' => array(
+      'from_name' => 'needs_review',
+      'to_name' => 'rejected',
     ),
     'published:archived' => array(
       'from_name' => 'published',
@@ -31,6 +39,14 @@ function imagex_workflow_workbench_moderation_export_transitions() {
     ),
     'published:needs_review' => array(
       'from_name' => 'published',
+      'to_name' => 'needs_review',
+    ),
+    'rejected:draft' => array(
+      'from_name' => 'rejected',
+      'to_name' => 'draft',
+    ),
+    'rejected:needs_review' => array(
+      'from_name' => 'rejected',
       'to_name' => 'needs_review',
     ),
   );
