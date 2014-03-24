@@ -55,4 +55,5 @@ features[workbench_moderation_transitions][] = published:draft
 features[workbench_moderation_transitions][] = published:needs_review
 features[workbench_moderation_transitions][] = rejected:draft
 features[workbench_moderation_transitions][] = rejected:needs_review
+features[taxonomy][] = workbench_section
 features[uuid_term][] = d3f5f60c-54a5-4539-85e7-f3d0fc65390b

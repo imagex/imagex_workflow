@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * imagex_workflow_access_sections_defaults.features.uuid_term.inc
+ * imagex_workflow.features.uuid_term.inc
  */
 
 /**
  * Implements hook_uuid_features_default_terms().
  */
-function imagex_workflow_access_sections_defaults_uuid_features_default_terms() {
+function imagex_workflow_uuid_features_default_terms() {
   $terms = array();
 
   $terms[] = array(
