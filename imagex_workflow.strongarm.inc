@@ -28,7 +28,7 @@ function imagex_workflow_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'workbench_access_auto_assign';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['workbench_access_auto_assign'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -42,7 +42,7 @@ function imagex_workflow_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'workbench_access_label';
-  $strongarm->value = 'Section';
+  $strongarm->value = 'Workbench Section';
   $export['workbench_access_label'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -50,10 +50,16 @@ function imagex_workflow_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'workbench_access_menu';
   $strongarm->value = array(
+    'menu-footer' => 0,
+    'menu-join-us' => 0,
+    'menu-linux-foundation-network' => 0,
     'main-menu' => 0,
     'management' => 0,
     'navigation' => 0,
+    'menu-primary-menu' => 0,
     'user-menu' => 0,
+    'menu-using-answers' => 0,
+    'menu-utility-menu' => 0,
   );
   $export['workbench_access_menu'] = $strongarm;
 
@@ -63,6 +69,22 @@ function imagex_workflow_strongarm() {
   $strongarm->name = 'workbench_access_menu_limit';
   $strongarm->value = 1;
   $export['workbench_access_menu_limit'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'workbench_access_menu_override';
+  $strongarm->value = 0;
+  $export['workbench_access_menu_override'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'workbench_access_taxonomy';
+  $strongarm->value = array(
+    'workbench_section' => 'workbench_section',
+  );
+  $export['workbench_access_taxonomy'] = $strongarm;
 
   features_alter_code('variable', $export);
 

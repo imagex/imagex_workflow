@@ -8,7 +8,7 @@
  * Implements hook_taxonomy_default_vocabularies().
  */
 function imagex_workflow_taxonomy_default_vocabularies() {
-  return array(
+  $taxonomy = array(
     'workbench_section' => array(
       'name' => 'Workbench Section',
       'machine_name' => 'workbench_section',
@@ -33,4 +33,8 @@ function imagex_workflow_taxonomy_default_vocabularies() {
       ),
     ),
   );
+
+  features_alter_code('taxonomy', $taxonomy);
+
+  return $taxonomy;
 }
