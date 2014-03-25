@@ -1,31 +1,4 @@
 <?php
-
 /**
- * Implements hook_install().
+ * @file
  */
-function imagex_workflow_install() {
-  // Add the access section default user 1.
-  if(db_table_exists('workbench_access_user')) {
-    $record['uid'] = 1;
-    $record['access_id'] = 'workbench_section';
-    $record['access_scheme'] = 'taxonomy';
-    drupal_write_record('workbench_access_user', $record);
-
-    $query = db_select('workbench_access', 'wa');
-    $query->fields('wa', array('access_id'));
-    $result = $query->execute();
-    $tids = $result->fetchAll();
-
-    foreach($tids as $tid) {
-      if (is_numeric($tid->access_id)) {
-        db_merge('workbench_access_user')
-          ->key(array('access_id' => $tid->access_id))
-          ->fields(array(
-            'uid' => 1,
-            'access_scheme' => 'taxonomy',
-          ))
-          ->execute();
-      }
-    }
-  }
-}

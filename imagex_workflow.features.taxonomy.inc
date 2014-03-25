@@ -11,7 +11,7 @@ function imagex_workflow_taxonomy_default_vocabularies() {
   $taxonomy = array(
     'workbench_section' => array(
       'name' => 'Workbench Section',
-      'machine_name' => 'workbench_section',
+      'machine_name' => IMAGEX_WORKFLOW_ACCESS_TAXONOMY_VOCABULARY_MACHINE_NAME,
       'description' => 'Taxonomy terms associated with editorial workflow permissions.',
       'hierarchy' => 0,
       'module' => 'taxonomy',
