@@ -4,6 +4,7 @@ core = 7.x
 package = ImageX
 version = 7.x-1.0
 project = imagex_workflow
+dependencies[] = admin_views
 dependencies[] = ctools
 dependencies[] = entity
 dependencies[] = features

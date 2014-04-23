@@ -182,3 +182,43 @@ function imagex_workflow_workbench_access_section_form_submit(&$form, &$form_sta
     }
   }
 }
+
+/*
+ * Implementation of hook_views_default_views_alter().
+ */
+function imagex_workflow_views_default_views_alter(&$views) {
+  // Alter only the 'admin_views_node' view.
+  if (array_key_exists('admin_views_node', $views)) {
+    /* Display: Defaults */
+    $handler =& $views['admin_views_node']->display['default'];
+    /* Filter criterion: Workbench Moderation: State */
+    $handler->display_options['filters']['state']['id'] = 'state';
+    $handler->display_options['filters']['state']['table'] = 'workbench_moderation_node_history';
+    $handler->display_options['filters']['state']['field'] = 'state';
+    $handler->display_options['filters']['state']['exposed'] = TRUE;
+    $handler->display_options['filters']['state']['expose']['operator_id'] = 'state_op';
+    $handler->display_options['filters']['state']['expose']['label'] = 'State';
+    $handler->display_options['filters']['state']['expose']['operator'] = 'state_op';
+    $handler->display_options['filters']['state']['expose']['identifier'] = 'state';
+    $handler->display_options['filters']['state']['expose']['remember_roles'] = array(
+      2 => '2',
+      1 => 0,
+      3 => 0,
+      7 => 0,
+      5 => 0,
+      6 => 0,
+      4 => 0,
+      8 => 0,
+    );
+    /* Filter criterion: Workbench Moderation: Current */
+    $handler->display_options['filters']['current']['id'] = 'current';
+    $handler->display_options['filters']['current']['table'] = 'workbench_moderation_node_history';
+    $handler->display_options['filters']['current']['field'] = 'current';
+    $handler->display_options['filters']['current']['value'] = '1';
+    $handler->display_options['filters']['current']['expose']['operator_id'] = '';
+    $handler->display_options['filters']['current']['expose']['label'] = 'Current revision';
+    $handler->display_options['filters']['current']['expose']['operator'] = 'current_op';
+    $handler->display_options['filters']['current']['expose']['identifier'] = 'current';
+    $handler->display_options['filters']['current']['expose']['required'] = TRUE;
+  }
+}
